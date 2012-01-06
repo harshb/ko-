@@ -1,0 +1,276 @@
+body {
+	font: 70%/normal "Lucida Grande", Verdana, Helvetica, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+#threeColLayout {
+	background: url("background.gif") fixed repeat-x rgb(202, 199, 138);
+}
+#twoColLayout {
+	background: url("background.gif") fixed repeat-x rgb(202, 199, 138);
+}
+#oneColLayout {
+	background: url("background.gif") fixed repeat-x rgb(202, 199, 138);
+}
+a:link {
+	color: rgb(102, 102, 102); text-decoration: underline; background-color: transparent;
+}
+a:hover {
+	color: rgb(153, 153, 0); text-decoration: underline; background-color: rgb(255, 255, 204);
+}
+a:visited {
+	color: rgb(102, 102, 102); text-decoration: underline; background-color: transparent;
+}
+h1 {
+	margin: 0px; padding: 30px; color: rgb(255, 0, 0); text-indent: -9000px; font-size: 150%;
+}
+h2 {
+	background: rgb(229, 226, 169); margin: 0px 10px; padding: 2px; color: rgb(163, 160, 111); font-size: 130%;
+}
+h3 {
+	margin: 10px 5px 0px; padding: 2px; text-transform: uppercase; font-size: 92%; display: inline;
+}
+.default h3 {
+	background: rgb(246, 206, 69);
+}
+.careers h3 {
+	background: rgb(247, 98, 224);
+}
+.one_man h3 {
+	background: rgb(177, 143, 209); font-size: 110%;
+}
+.interviews h3 {
+	background: rgb(215, 212, 147); font-size: 110%;
+}
+.profiles h3 {
+	background: rgb(196, 221, 184);
+}
+#wrapper {
+	margin: 0px auto; padding: 0px 10px 10px; width: 750px; background-color: rgb(215, 212, 147);
+}
+#header 
+{
+   
+	background: url("/Public/images/mi.jpg");
+	background-repeat: no-repeat;
+	float: left;
+	background-color: #62bd18; 
+    width: 1023px; 
+    height: 100px;
+    border: 1px solid #ffffff;
+    margin-top: 8px;
+}
+#primaryContent {
+	margin: 0px 0px 20px; width: 750px; float: left; display: inline;
+}
+#threeColLayout #primaryContent {
+	margin: 0px 0px 20px 195px; width: 270px; float: left;
+}
+#twoColLayout #primaryContent {
+	margin: 0px 0px 20px 195px; width: 555px; float: left;
+}
+#twoColLayout #secondaryContent {
+	display: none;
+}
+#secondaryContent {
+	margin: 0px 0px 20px 15px; width: 270px; float: left;
+}
+#sideContent {
+	margin: 0px 0px 20px -750px; width: 180px; float: left;
+}
+#oneColLayout #secondaryContent {
+	display: none;
+}
+#oneColLayout #sideContent {
+	display: none;
+}
+#twoColContent {
+	margin: 0px 0px 20px 195px; width: 555px; float: left;
+}
+.cbSide {
+	background: rgb(255, 255, 255); margin: 5px 0px 0px 10px; padding: 10px 0px 5px; width: 160px;
+}
+.cbSide p {
+	margin: 0px; padding: 0px 5px 2px; color: rgb(102, 102, 102); font-size: 90%;
+}
+.box {
+	background: url("diags.gif"); margin: 15px 0px 0px; padding: 5px 0px; clear: both;
+}
+.cbb {
+	background: rgb(255, 255, 255); margin: 0px 10px; padding: 5px 0px; line-height: 170%;
+}
+.cbb p {
+	margin: 0px; padding: 0px 5px 5px 50px; color: rgb(51, 51, 51);
+}
+.cb p {
+	margin: 0px; padding: 0px 5px 5px 50px; color: rgb(51, 51, 51);
+}
+.cb {
+	margin: 0.5em 0px; width: 100%; line-height: 170%; float: left;
+}
+.bt {
+	background: url("box.gif") no-repeat 100% 0px; margin: 0px 0px 0px 18px; height: 27px;
+}
+.bt div {
+	background: url("box.gif") no-repeat 0px 0px; left: -18px; width: 18px; height: 27px; position: relative;
+}
+.bb {
+	background: url("box.gif") no-repeat 100% 100%; margin: 0px 0px 0px 12px; height: 14px;
+}
+.bb div {
+	background: url("box.gif") no-repeat 0px 100%; left: -12px; width: 12px; height: 14px; position: relative;
+}
+.i1 {
+	padding: 0px 0px 0px 7px; margin-left: 0px;
+}
+.i2 {
+	background: url("borders.gif") repeat-y 100% 0px; padding: 0px 12px 0px 0px;
+}
+.i3 {
+	background: rgb(255, 255, 255); border-width: 1px 0px; border-style: solid; border-color: rgb(255, 255, 255); padding: 0px 5px;
+}
+.date {
+	color: rgb(102, 102, 102); font-size: 85%; font-weight: bold;
+}
+.posted {
+	margin: -5px 0px 0px 50px; padding: 0px 0px 10px; color: rgb(102, 102, 102); font-weight: bold; display: block;
+}
+.postedUnderline {
+	margin: 0px 5px 5px 50px; padding: 0px 0px 5px; color: rgb(102, 102, 102); font-weight: bold; border-bottom-color: rgb(153, 153, 153); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+address {
+	margin-left: 50px;
+}
+#footer {
+	background: url("footer.gif"); padding: 0px; width: 750px; height: 85px; clear: both;
+}
+#footer p {
+	margin: 10px 10px 0px 0px; padding: 50px 4px 4px 0px; font-weight: bold;
+}
+#footer a:link {
+	color: rgb(215, 212, 147);
+}
+#footer a:visited {
+	color: rgb(215, 212, 147);
+}
+#footer a:hover {
+	background: rgb(215, 212, 147); color: rgb(0, 0, 0);
+}
+img {
+	margin: 0px 0px 2px 5px; border: 2px solid rgb(197, 189, 189); float: left;
+}
+.default img {
+	border: 0px currentColor;
+}
+.mainImage {
+	border: 3px solid rgb(197, 189, 189); margin-top: 4px; float: none; display: block;
+}
+.img-wrapper {
+	background: url("shadow.gif") no-repeat right bottom; margin: 20px 40px 0px 0px; line-height: 0; float: left;
+}
+.img-wrapper img {
+	background: rgb(255, 255, 255); margin: 0px; padding: 4px; border: 1px solid rgb(197, 189, 189); left: -5px; top: -5px; float: none; position: relative;
+}
+.thumbnails {
+	margin: 0px 0px 20px 50px;
+}
+.spacer {
+	clear: both;
+}
+.cbSide ul {
+	padding: 3px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; list-style-type: none;
+}
+.cbSide li a:link {
+	background: url("ticks.gif") rgb(255, 255, 255); width: 154px; color: rgb(51, 51, 51); line-height: 150%; text-decoration: none; border-bottom-color: rgb(237, 234, 235); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+.cbSide li a:active {
+	background: url("ticks.gif") rgb(255, 255, 255); width: 154px; color: rgb(51, 51, 51); line-height: 150%; text-decoration: none; border-bottom-color: rgb(237, 234, 235); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+.cbSide li a:hover {
+	background: url("ticks.gif") 0px -20px rgb(255, 255, 255); width: 154px; color: rgb(153, 0, 0); line-height: 150%; text-decoration: none; border-bottom-color: rgb(237, 234, 235); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+.cbSide li a:visited {
+	background: url("ticks.gif") 0px -40px rgb(255, 255, 255); width: 154px; color: rgb(153, 153, 153); line-height: 150%; text-decoration: none; border-bottom-color: rgb(237, 234, 235); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+#mainNav {
+	margin: 30px 0px 0px; padding: 0px; width: 750px; height: 35px; font-size: 90%; font-weight: bold;
+}
+#mainNav ul {
+	list-style: none; margin: 0px; padding: 0px; border: currentColor;
+}
+#mainNav li {
+	margin: 0px; padding: 0px; width: auto; float: left; display: block;
+}
+#mainNav a {
+	background: rgb(0, 0, 0); margin: 0px; padding: 10px; width: auto; color: rgb(215, 212, 147); text-decoration: none; border-right-color: rgb(255, 255, 255); border-right-width: 1px; border-right-style: solid; display: inline;
+}
+#mainNav a:hover {
+	color: rgb(255, 255, 255);
+}
+#mainNav a:active {
+	color: rgb(255, 255, 255);
+}
+#mainNav a.active:link {
+	background: rgb(187, 187, 187); color: rgb(215, 212, 147); font-weight: bold; position: relative; z-index: 102;
+}
+#mainNav a.active:visited {
+	background: rgb(187, 187, 187); color: rgb(215, 212, 147); font-weight: bold; position: relative; z-index: 102;
+}
+body.home #mainNav a#home {
+	color: rgb(255, 255, 255); text-decoration: underline;
+}
+body.gallery #mainNav a#gallery {
+	color: rgb(255, 255, 255); text-decoration: underline;
+}
+body.contact #mainNav a#contact {
+	color: rgb(255, 255, 255); text-decoration: underline;
+}
+body.home #mainNav a#home:hover {
+	color: rgb(0, 0, 0);
+}
+body.gallery #mainNav a#gallery:hover {
+	color: rgb(0, 0, 0);
+}
+body.contact #mainNav a#contact:hover {
+	color: rgb(0, 0, 0);
+}
+.default.box a[href^='http:'] {
+	background: url("external.gif") no-repeat right top; padding-right: 10px;
+}
+.default.box a[href^='http://www.collylogic.com'] {
+	padding-right: 0px; background-image: none;
+}
+.default.box a[href^='http://www.collylogic.com'] {
+	padding-right: 0px; background-image: none;
+}
+form {
+	margin: 0px; padding: 0px; font-size: 80%;
+}
+fieldset {
+	margin: 0px 0px 10px; padding: 5px; border: 0px currentColor; width: 146px;
+}
+.default fieldset {
+	margin: 10px 0px -10px; padding: 0px 0px 30px; border: 0px currentColor; width: auto;
+}
+legend {
+	background: rgb(215, 46, 46); margin: 10px 0px 2px !important; padding: 2px; color: rgb(255, 255, 255); text-transform: uppercase; font-size: 110%; font-weight: bold;
+}
+.default legend {
+	display: none;
+}
+label {
+	display: none;
+}
+.default label {
+	padding: 10px 0px; font-weight: bold; display: block;
+}
+input {
+	background: rgb(215, 231, 233); padding: 2px; border: 0px currentColor; color: rgb(51, 51, 51); margin-top: 0px;
+}
+textarea {
+	background: rgb(215, 231, 233); padding: 2px; border: 0px currentColor; color: rgb(51, 51, 51); margin-top: 0px;
+}
+.default input {
+	display: block;
+}
+input.submit {
+	padding: 2px; border: 0px currentColor; font-size: 10px; margin-bottom: -6px;
+}

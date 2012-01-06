@@ -1,0 +1,18 @@
+﻿@functions
+{
+    public static dynamic FooterText()
+    {
+        return new HtmlString(string.Format(" &copy;{0} Harsh Bhasin. Licensed under BSD License", @DateTime.Now.Year));
+    }
+    
+    public static string ComboLabel(string name)
+    {
+       name= name.Replace("Combo", "");
+       name = name.Replace("combo", "");
+       name = name.Replace("ID", "");
+       name = name.Replace("id", "");
+
+       return name;
+    }
+}
+

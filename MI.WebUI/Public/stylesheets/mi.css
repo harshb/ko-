@@ -1,0 +1,31 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+body {
+    
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    
+    background: rgb(202, 199, 138);
+}
+
+a:link {
+	color: rgb(102, 102, 102); text-decoration: underline; background-color: transparent;
+}
+a:hover {
+	color: rgb(153, 153, 0); text-decoration: underline; background-color: rgb(255, 255, 204);
+}
+a:visited {
+	color: rgb(102, 102, 102); text-decoration: underline; background-color: transparent;
+}
+#logindisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    color: White;
+    float:right;
+}
+
+

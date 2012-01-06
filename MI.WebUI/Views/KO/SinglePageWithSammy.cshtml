@@ -1,0 +1,155 @@
+﻿<style type="text/css">
+
+.selected {
+	background: rgb(196, 221, 184);
+}
+
+.folders { background-color: #bbb; list-style-type: none; padding: 0; margin: 0; border-radius: 7px; 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d6d6d6), color-stop(0.4, #c0c0c0), color-stop(1,#a4a4a4)); 
+	margin: 10px 0 16px 0;
+	font-size: 0px;
+}
+.folders li:hover { background-color: #ddd; }    
+.folders li:first-child { border-left: none; border-radius: 7px 0 0 7px; }
+.folders li { font-size: 16px; font-weight: bold; display: inline-block; padding: 0.5em 1.5em; cursor: pointer; color: #444; text-shadow: #f7f7f7 0 1px 1px; border-left: 1px solid #ddd; border-right: 1px solid #888; }
+.folders li { *display: inline !important; } /* IE7 only */
+.folders .selected { background-color: #444 !important; color: white; text-shadow:none; border-right-color: #aaa; border-left: none; box-shadow:inset 1px 2px 6px #070707; }    
+
+.mails { width: 100%; table-layout:fixed; border-spacing: 0; }
+.mails thead { background-color: #bbb; font-weight: bold; color: #444; text-shadow: #f7f7f7 0 1px 1px; }
+.mails tbody tr:hover { cursor: pointer; background-color: #68c !important; color: White; }
+.mails th, .mails td { text-align:left; padding: 0.4em 0.3em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mails th { border-left: 1px solid #ddd; border-right: 1px solid #888; padding: 0.4em 0 0.3em 0.7em; }    
+.mails th:nth-child(1), .mails td:nth-child(1) { width: 20%; }
+.mails th:nth-child(2), .mails td:nth-child(2) { width: 15%; }
+.mails th:nth-child(3), .mails td:nth-child(3) { width: 45%; }
+.mails th:nth-child(4), .mails td:nth-child(4) { width: 15%; }
+.mails th:last-child { border-right: none }
+.mails tr:nth-child(even) { background-color: #EEE; }
+  
+.viewMail .mailInfo { background-color: #dae0e8; padding: 1em 1em 0.5em 1.25em; border-radius: 1em; }
+.viewMail .mailInfo h1 { margin-top: 0.2em; font-size: 130%; }
+.viewMail .mailInfo label { color: #777; font-weight: bold; min-width: 2.75em; text-align:right; display: inline-block; }
+.viewMail .message { padding: 0 1.25em; }
+
+</style>
+
+<script type="text/JavaScript">
+
+
+    var selectedfolder;
+    function WebmailViewModel() {
+        // Data
+        var self = this;
+        //self.chosenFolderData = ko.observableArray([]);
+        self.chosenFolderData = ko.observable();
+        self.chosenMailData = ko.observable();
+        self.folders = ['Inbox', 'Archive', 'Sent', 'Spam'];
+        self.chosenFolderId = ko.observable();
+
+
+        // Behaviours
+        /*
+        self.goToFolder = function (folder) {
+            selectedfolder = folder;
+            self.chosenFolderId(folder);
+            self.chosenMailData(null); // Stop showing a mail
+
+            $.get('/KO/mail', { folder: folder }, self.chosenFolderData);
+
+        };     
+
+        self.goToMail = function (mail) 
+        {
+            self.chosenFolderId(mail.folder);
+            self.chosenFolderData(null); // Stop showing a folder
+            $.get("/KO/onemail", { mailId: mail.id }, self.chosenMailData);
+        };
+        */
+        self.goToFolder = function (folder) {
+            location.hash = folder
+            selectedfolder = folder;
+        };
+        self.goToMail = function (mail) {
+            //location.hash = mail.folder + '/' + mail.id 
+            location.hash = selectedfolder + '/' + mail.id 
+         };
+
+        // Client-side routes    
+        Sammy(function () {
+            this.get('#:folder', function ()
+             {
+                self.chosenFolderId(this.params.folder);
+                self.chosenMailData(null);
+                $.get("/KO/mail", { folder: this.params.folder }, self.chosenFolderData);
+            });
+
+            this.get('#:folder/:mailId', function ()
+             {
+                self.chosenFolderId(this.params.folder);
+                self.chosenFolderData(null);
+                $.get("/KO/onemail", { mailId: this.params.mailId }, self.chosenMailData);
+            });
+
+            this.get('', function () { this.app.runRoute('get', '#Inbox') });
+        }).run();
+
+        // Operations
+        self.back = function () {
+            self.goToFolder(selectedfolder);
+        }
+
+        // Show inbox by default
+        //self.goToFolder('Inbox');
+    };
+
+    
+</script> 
+
+<h2>Single Page</h2>
+
+<div class="span-24">
+<!-- Folders -->
+<ul class="folders" data-bind="foreach: folders">
+    <li data-bind="text: $data, 
+                   css: { selected: $data == $root.chosenFolderId() },
+                   click: $root.goToFolder"></li>
+</ul>
+</div>
+
+<div class="span-24">
+    <!-- Mails grid -->
+    @*<table class="mails" data-bind="with: chosenFolderData">*@
+    <table class="mails">
+        <thead><tr><th>From</th><th>To</th><th>Subject</th><th>Date</th></tr></thead>
+        <tbody data-bind="foreach: chosenFolderData">
+             <tr data-bind="click: $root.goToMail">
+                <td data-bind="text: from"></td>
+                <td data-bind="text: to"></td>
+                <td data-bind="text: subject"></td>
+                <td data-bind="text: date"></td>
+            </tr>     
+        </tbody>
+    </table>
+
+    <!-- Chosen mail -->
+    <div class="viewMail" data-bind="with: chosenMailData">
+        <div class="mailInfo">
+            <h3 data-bind="text: subject"></h3>
+            
+            <p>From: <b data-bind="text: from"></b></p>
+            <p>To: <b data-bind="text: to"></b></p>
+            <p>Date: <b data-bind="text: date"></b></p>
+             <p class="message" data-bind="html: body" />
+            <p> <button data-bind="click: $root.back">Back</button></p>
+        </div>
+       
+      
+    </div>
+
+     
+
+</div>
+<script>
+    ko.applyBindings(new WebmailViewModel());
+</script>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+   
+    @Assets.jQuery(false)
+    @Assets.CSS("screen.css")
+    @Assets.CSS("print.css", "print")
+    @Assets.CSS("forms.css")
+    @Assets.CSS("plugins/fancy-type/screen.css")
+    @Assets.Script("knockout-2.0.0.js")
+    @Assets.Script("knockout.mapping.js")
+    @Assets.Script("sammy-latest.min.js")
+    
+
+    @*to change theme pass in any of the following theme names: dot-luv, humanity, 
+    redmond,start,ui-darkness,ui-lightness,blitzer, dark-hive,eggplant,le-frog
+    mint-choc,south-street,trontastic
+    *@
+
+    @Assets.jgrid("south-street")
+    @Assets.CSS("mi.css")
+    @Assets.CSS("menu.css")
+</head>
+<body>
+    <div class="container">
+        <div class="span-24">
+            <div id="logo">
+                <h1>MI</h1>
+                    
+                <ul id="mainNav">
+                    <li><a id="home" href="/">Home</a></li>
+                 
+                 
+                     <li>@Html.ActionLink("Basics", "Basics", "KO")</li>
+                     <li>@Html.ActionLink("Lists & Collections", "Collections", "KO")</li>
+                     <li>@Html.ActionLink("Single Page", "SinglePage", "KO")</li>
+                      <li>@Html.ActionLink("Single Page With Sammy", "SinglePageWithSammy", "KO")</li>
+                      <li>@Html.ActionLink("Custom Bindings", "CustomBindings", "KO")</li>
+                   
+                   
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact us", "About", "Home")</li>
+                <!-- end #header -->
+            </div>
+            <div  id="logindisplay">
+            @Html.Partial("_LogOnPartial")
+         </div>
+           
+        </div>
+        <hr>
+        
+        <hr class="space">
+        @RenderBody()
+        <!--footer---->
+        <hr>
+        <p>
+            @Snippets.FooterText()
+        </p>
+        <hr>
+    </div>
+</body>
+</html>

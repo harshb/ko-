@@ -1,0 +1,13 @@
+﻿@functions
+{
+  public static dynamic Scrub(string quote)
+  {
+      return new HtmlString(quote);
+  }
+}
+@helper User(string quote)
+{
+    <div class ="quote">
+        @Scrub(quote)
+    </div>
+}

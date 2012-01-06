@@ -1,0 +1,52 @@
+C:\MI\MI.Tests\bin\Debug\MI.Tests.exe.config
+C:\MI\MI.Tests\bin\Debug\MI.Tests.exe
+C:\MI\MI.Tests\bin\Debug\MI.Tests.pdb
+C:\MI\MI.Tests\bin\Debug\MI.Domain.dll
+C:\MI\MI.Tests\bin\Debug\MI.WebUI.dll
+C:\MI\MI.Tests\bin\Debug\nunit.framework.dll
+C:\MI\MI.Tests\bin\Debug\nunit.mocks.dll
+C:\MI\MI.Tests\bin\Debug\pnunit.framework.dll
+C:\MI\MI.Tests\bin\Debug\MI.Domain.pdb
+C:\MI\MI.Tests\bin\Debug\MI.WebUI.pdb
+C:\MI\MI.Tests\bin\Debug\nunit.framework.xml
+C:\MI\MI.Tests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MI\MI.Tests\obj\x86\Debug\MI.Tests.exe
+C:\MI\MI.Tests\obj\x86\Debug\MI.Tests.pdb
+C:\MI Git\MI.Tests\bin\Debug\MI.Tests.exe.config
+C:\MI Git\MI.Tests\bin\Debug\MI.Tests.exe
+C:\MI Git\MI.Tests\bin\Debug\MI.Tests.pdb
+C:\MI Git\MI.Tests\bin\Debug\MI.Domain.dll
+C:\MI Git\MI.Tests\bin\Debug\MI.WebUI.dll
+C:\MI Git\MI.Tests\bin\Debug\nunit.framework.dll
+C:\MI Git\MI.Tests\bin\Debug\nunit.mocks.dll
+C:\MI Git\MI.Tests\bin\Debug\pnunit.framework.dll
+C:\MI Git\MI.Tests\bin\Debug\MI.Domain.pdb
+C:\MI Git\MI.Tests\bin\Debug\MI.WebUI.pdb
+C:\MI Git\MI.Tests\bin\Debug\nunit.framework.xml
+C:\MI Git\MI.Tests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MI Git\MI.Tests\obj\x86\Debug\MI.Tests.exe
+C:\MI Git\MI.Tests\obj\x86\Debug\MI.Tests.pdb
+C:\MIGit\MI.Tests\bin\Debug\MI.Tests.exe.config
+C:\MIGit\MI.Tests\bin\Debug\MI.Tests.exe
+C:\MIGit\MI.Tests\bin\Debug\MI.Tests.pdb
+C:\MIGit\MI.Tests\bin\Debug\MI.Domain.dll
+C:\MIGit\MI.Tests\bin\Debug\nunit.framework.dll
+C:\MIGit\MI.Tests\bin\Debug\nunit.mocks.dll
+C:\MIGit\MI.Tests\bin\Debug\pnunit.framework.dll
+C:\MIGit\MI.Tests\bin\Debug\MI.Domain.pdb
+C:\MIGit\MI.Tests\bin\Debug\nunit.framework.xml
+C:\MIGit\MI.Tests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MIGit\MI.Tests\obj\x86\Debug\MI.Tests.exe
+C:\MIGit\MI.Tests\obj\x86\Debug\MI.Tests.pdb
+C:\KnockOut\MI.Tests\bin\Debug\MI.Tests.exe.config
+C:\KnockOut\MI.Tests\bin\Debug\MI.Tests.exe
+C:\KnockOut\MI.Tests\bin\Debug\MI.Tests.pdb
+C:\KnockOut\MI.Tests\bin\Debug\nunit.framework.dll
+C:\KnockOut\MI.Tests\bin\Debug\nunit.mocks.dll
+C:\KnockOut\MI.Tests\bin\Debug\pnunit.framework.dll
+C:\KnockOut\MI.Tests\bin\Debug\nunit.framework.xml
+C:\KnockOut\MI.Tests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\KnockOut\MI.Tests\obj\x86\Debug\MI.Tests.exe
+C:\KnockOut\MI.Tests\obj\x86\Debug\MI.Tests.pdb
+C:\KnockOut\MI.Tests\bin\Debug\MI.WebUI.dll
+C:\KnockOut\MI.Tests\bin\Debug\MI.WebUI.pdb

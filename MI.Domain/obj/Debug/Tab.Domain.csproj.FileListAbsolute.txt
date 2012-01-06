@@ -1,0 +1,16 @@
+C:\TAB\Tab.Domain\Tab.Domain\bin\Debug\Tab.Domain.dll
+C:\TAB\Tab.Domain\Tab.Domain\bin\Debug\Tab.Domain.pdb
+C:\TAB\Tab.Domain\Tab.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\TAB\Tab.Domain\Tab.Domain\obj\Debug\Tab.Domain.dll
+C:\TAB\Tab.Domain\Tab.Domain\obj\Debug\Tab.Domain.pdb
+C:\TAB\Tab.Domain\Tab.Domain\bin\Debug\Dynamic.dll
+C:\TAB\Tab.Domain\Tab.Domain\bin\Debug\EntityFramework.dll
+C:\TAB\Tab.Domain\Tab.Domain\bin\Debug\EntityFramework.xml
+C:\MI\Tab.Domain\Tab.Domain\bin\Debug\Tab.Domain.dll
+C:\MI\Tab.Domain\Tab.Domain\bin\Debug\Tab.Domain.pdb
+C:\MI\Tab.Domain\Tab.Domain\bin\Debug\Dynamic.dll
+C:\MI\Tab.Domain\Tab.Domain\bin\Debug\EntityFramework.dll
+C:\MI\Tab.Domain\Tab.Domain\bin\Debug\EntityFramework.xml
+C:\MI\Tab.Domain\Tab.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\MI\Tab.Domain\Tab.Domain\obj\Debug\Tab.Domain.dll
+C:\MI\Tab.Domain\Tab.Domain\obj\Debug\Tab.Domain.pdb

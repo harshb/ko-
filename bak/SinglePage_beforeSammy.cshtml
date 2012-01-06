@@ -1,0 +1,99 @@
+﻿<style type="text/css">
+
+.selected {
+	background: rgb(196, 221, 184);
+}
+
+
+
+</style>
+
+<script type="text/JavaScript">
+
+
+    var selectedfolder;
+    function WebmailViewModel() {
+        // Data
+        var self = this;
+        //self.chosenFolderData = ko.observableArray([]);
+        self.chosenFolderData = ko.observable();
+        self.chosenMailData = ko.observable();
+        self.folders = ['Inbox', 'Archive', 'Sent', 'Spam'];
+        self.chosenFolderId = ko.observable();
+
+       
+        // Behaviours
+        self.goToFolder = function (folder) {
+            selectedfolder = folder;
+            self.chosenFolderId(folder);
+            self.chosenMailData(null); // Stop showing a mail
+
+            $.get('/KO/mail', { folder: folder }, self.chosenFolderData);
+
+        };       //gofolder
+
+        self.goToMail = function (mail) 
+        {
+            self.chosenFolderId(mail.folder);
+            self.chosenFolderData(null); // Stop showing a folder
+            $.get("/KO/onemail", { mailId: mail.id }, self.chosenMailData);
+        };//gotomail
+
+        // Operations
+        self.back = function () {
+            self.goToFolder(selectedfolder);
+        }
+
+        // Show inbox by default
+        self.goToFolder('Inbox');
+    };
+
+    
+</script> 
+
+<h2>Single Page</h2>
+
+<div class="span-6">
+<!-- Folders -->
+<ul class="folders" data-bind="foreach: folders">
+    <li data-bind="text: $data, 
+                   css: { selected: $data == $root.chosenFolderId() },
+                   click: $root.goToFolder"></li>
+</ul>
+</div>
+
+<div class="span-14">
+    <!-- Mails grid -->
+    @*<table class="mails" data-bind="with: chosenFolderData">*@
+    <table>
+        <thead><tr><th>From</th><th>To</th><th>Subject</th><th>Date</th></tr></thead>
+        <tbody data-bind="foreach: chosenFolderData">
+             <tr data-bind="click: $root.goToMail">
+                <td data-bind="text: from"></td>
+                <td data-bind="text: to"></td>
+                <td data-bind="text: subject"></td>
+                <td data-bind="text: date"></td>
+            </tr>     
+        </tbody>
+    </table>
+
+    <!-- Chosen mail -->
+    <div class="viewMail" data-bind="with: chosenMailData">
+        <div class="mailInfo">
+            <h3 data-bind="text: subject"></h3>
+            
+            <p>From: <b data-bind="text: from"></b></p>
+            <p>To: <b data-bind="text: to"></b></p>
+            <p>Date: <b data-bind="text: date"></b></p>
+            <p> <button data-bind="click: $root.back">Back</button></p>
+        </div>
+        <p class="message" data-bind="html: body" />
+      
+    </div>
+
+     
+
+</div>
+<script>
+    ko.applyBindings(new WebmailViewModel());
+</script>

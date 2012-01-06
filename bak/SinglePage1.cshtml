@@ -1,0 +1,66 @@
+﻿<style type="text/css">
+
+.selected {
+	background: rgb(196, 221, 184);
+}
+
+
+
+</style>
+
+<script type="text/JavaScript">
+
+    
+
+    function WebmailViewModel() {
+        // Data
+        var self = this;
+        self.emailsList = ko.observableArray([]);
+        self.folders = ['Inbox', 'Archive', 'Sent', 'Spam'];
+        self.chosenFolderId = ko.observable();
+        //self.chosenFolderData = ko.observable();
+
+        // Behaviours
+        self.goToFolder = function (folder) {
+            self.chosenFolderId(folder);
+
+            $.get('/KO/mail', { folder: folder }, self.emailsList);
+
+        };      //gofolder
+
+        // Show inbox by default
+        self.goToFolder('Inbox');
+    };
+
+    
+</script> 
+
+<h2>Single Page</h2>
+
+<div class="span-6">
+<!-- Folders -->
+<ul class="folders" data-bind="foreach: folders">
+    <li data-bind="text: $data, 
+                   css: { selected: $data == $root.chosenFolderId() },
+                   click: $root.goToFolder"></li>
+</ul>
+</div>
+
+<div class="span-14">
+<!-- Mails grid -->
+@*<table class="mails" data-bind="with: chosenFolderData">*@
+<table>
+    <thead><tr><th>From</th><th>To</th><th>Subject</th><th>Date</th></tr></thead>
+    <tbody data-bind="foreach: emailsList">
+        <tr>
+            <td data-bind="text: from"></td>
+            <td data-bind="text: to"></td>
+            <td data-bind="text: subject"></td>
+            <td data-bind="text: date"></td>
+        </tr>     
+    </tbody>
+</table>
+</div>
+<script>
+    ko.applyBindings(new WebmailViewModel());
+</script>

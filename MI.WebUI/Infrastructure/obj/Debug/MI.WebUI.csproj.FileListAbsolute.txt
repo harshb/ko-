@@ -1,0 +1,9 @@
+C:\MI\Tab.WebUI\bin\EntityFramework.dll
+C:\MI\Tab.WebUI\bin\EntityFramework.xml
+C:\MI\Tab.WebUI\obj\Debug\ResolveAssemblyReference.cache
+C:\MI\Tab.WebUI\bin\MI.WebUI.dll
+C:\MI\Tab.WebUI\bin\MI.WebUI.pdb
+C:\MI\Tab.WebUI\bin\MI.Domain.dll
+C:\MI\Tab.WebUI\bin\MI.Domain.pdb
+C:\MI\Tab.WebUI\obj\Debug\MI.WebUI.dll
+C:\MI\Tab.WebUI\obj\Debug\MI.WebUI.pdb
